@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Depression Prediction Form</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+ <div class="login">
+    <h1>Depression Prediction</h1>
+<form action="{{ url_for('predict')}}"method="post">
+
+        <h3>I felt that I had nothing to look forward to</h3>
+        <p>1. Did not apply to me at all</p>
+        <p>2. Some of the time</p>
+        <p>3. A good part of the time</p>
+        <p>4. Most of the time</p>
+        
+        <input type="text" name="textbox1" required="required" />
+
+    <h3>I felt down-hearted and blue.</h3>
+        <p>1. Did not apply to me at all</p>
+        <p>2. Some of the time</p>
+        <p>3. A good part of the time</p>
+        <p>4. Most of the time</p>
+
+        <input type="text" name="textbox2" required="required" />
+
+    <h3>I felt I wasn’t worth much as a person.</h3>
+        <p>1. Did not apply to me at all</p>
+        <p>2. Some of the time</p>
+        <p>3. A good part of the time</p>
+        <p>4. Most of the time</p>
+
+    <input type="text" name="textbox3" required="required" />
+
+    <h3>I felt that life was meaningless.</h3>
+        <p>1. Did not apply to me at all</p>
+        <p>2. Some of the time</p>
+        <p>3. A good part of the time</p>
+        <p>4. Most of the time</p>
+
+    <input type="text" name="textbox4" required="required" />
+
+<br>
+   <br>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+
+
+   <br>
+   <br>
+   <h1>{{prediction_text}}</h1>
+
+<p class="back-link"><a href="Home.html">Back to Home</a></p>
+</form>
+ </div>
+
+
+</body>
+</html>
